@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+    <h2>Smart Market Analyzer - Admin Panel</h2>
+    <div class="nav-links">
+        <a href="/add_product">➕ Add Product</a>
+        <a href="/add_market">🏬 Add Market</a>
+        <a href="/add_price">📈 Add Daily Price</a>
+        <a href="/logout">🚪 Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2>Welcome Admin {{ name }}</h2>
+
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <h3>Total Products</h3>
+            <p>{{ products|length }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Markets</h3>
+            <p>{{ markets|length }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Total Price Records</h3>
+            <p>{{ prices|length }}</p>
+        </div>
+
+    </div>
+
+    <!-- PRODUCTS TABLE -->
+    <div class="table-section">
+        <h3>📦 Product Management</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Product Name</th>
+                <th>Delete</th>
+            </tr>
+
+            {% for p in products %}
+            <tr>
+                <td>{{ p['id'] }}</td>
+                <td>{{ p['product_name'] }}</td>
+                <td><a class="delete-btn" href="/delete_product/{{p['id']}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <!-- MARKETS TABLE -->
+    <div class="table-section">
+        <h3>🏬 Market Management</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Market Name</th>
+                <th>Location</th>
+                <th>Distance</th>
+                <th>Delete</th>
+            </tr>
+
+            {% for m in markets %}
+            <tr>
+                <td>{{ m['id'] }}</td>
+                <td>{{ m['market_name'] }}</td>
+                <td>{{ m['location'] }}</td>
+                <td>{{ m['distance'] }} KM</td>
+                <td><a class="delete-btn" href="/delete_market/{{m['id']}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <!-- PRICE TABLE -->
+    <div class="table-section">
+        <h3>📈 Daily Price Records</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Product</th>
+                <th>Market</th>
+                <th>Price</th>
+                <th>Date</th>
+                <th>Delete</th>
+            </tr>
+
+            {% for pr in prices %}
+            <tr>
+                <td>{{ pr['id'] }}</td>
+                <td>{{ pr['product_name'] }}</td>
+                <td>{{ pr['market_name'] }}</td>
+                <td>₹{{ pr['price'] }}</td>
+                <td>{{ pr['price_date'] }}</td>
+                <td><a class="delete-btn" href="/delete_price/{{pr['id']}}">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

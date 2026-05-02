@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Market Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>Smart Market Analyzer</h2>
+    <div class="nav-links">
+        <a href="/logout">🚪 Logout</a>
+    </div>
+</div>
+
+<div class="container">
+
+    <h2>Welcome {{ name }}</h2>
+
+    <div class="form-box">
+        <h2>Select Preferred Product</h2>
+        <form action="/save_preference" method="POST">
+            <select name="preferred_product" required>
+                <option value="">Choose Product</option>
+                {% for p in products %}
+                <option value="{{ p['id'] }}"
+                    {% if preferred_product == p['id'] %} selected {% endif %}>
+                    {{ p['product_name'] }}
+                </option>
+                {% endfor %}
+            </select>
+            <button type="submit">Analyze Product</button>
+        </form>
+    </div>
+
+    {% if preferred_product %}
+
+    <div class="alert-box">
+        <p><b>Market Alert:</b> {{ alert_message }}</p>
+    </div>
+
+    <div class="dashboard-cards">
+
+        <div class="card">
+            <h3>Best Buy Market</h3>
+            {% if best_buy %}
+                <p>{{ best_buy['market_name'] }}</p>
+                <small>₹{{ best_buy['price'] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="card">
+            <h3>Best Sell Market</h3>
+            {% if best_sell %}
+                <p>{{ best_sell['market_name'] }}</p>
+                <small>₹{{ best_sell['price'] }}</small>
+            {% endif %}
+        </div>
+
+        <div class="card">
+            <h3>Tomorrow Prediction</h3>
+            <p>₹{{ tomorrow_price }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Estimated Profit</h3>
+            <p>₹{{ estimated_profit }}</p>
+        </div>
+
+        <div class="card">
+            <h3>Price Change</h3>
+            <p>{{ percentage_change }}%</p>
+        </div>
+
+    </div>
+
+    <div class="graph-section">
+        <h3>Price Trend Analysis</h3>
+        <img src="{{ url_for('static', filename='charts/price_chart.png') }}" width="700">
+    </div>
+
+    <div class="table-box">
+        <h3>Today's Price Records</h3>
+        <table>
+            <tr>
+                <th>Product</th>
+                <th>Market</th>
+                <th>Price</th>
+                <th>Date</th>
+            </tr>
+            {% for row in prices %}
+            <tr>
+                <td>{{ row['product_name'] }}</td>
+                <td>{{ row['market_name'] }}</td>
+                <td>₹{{ row['price'] }}</td>
+                <td>{{ row['price_date'] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    {% else %}
+
+    <div class="alert-box">
+        <p><b>Please select a product to start smart market analysis.</b></p>
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>

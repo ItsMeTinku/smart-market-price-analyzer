@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - Smart Market Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="auth-body">
+
+<div class="auth-box">
+    <h2>Create New Account</h2>
+
+    <form action="/register_user" method="POST">
+        <input type="text" name="fullname" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Email Address" required>
+        <input type="password" name="password" placeholder="Create Password" required>
+        <button type="submit">Register Now</button>
+    </form>
+
+    <p>Already registered? <a href="/login">Login Here</a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Smart Market Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="auth-body">
+
+<div class="auth-box">
+    <h2>User Login</h2>
+
+    <form action="/login_user" method="POST">
+        <input type="email" name="email" placeholder="Enter Email" required>
+        <input type="password" name="password" placeholder="Enter Password" required>
+        <button type="submit">Login Now</button>
+    </form>
+
+    <p>Don't have account? <a href="/register">Register Here</a></p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Market</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>Smart Market Analyzer</h2>
+    <div class="nav-links">
+        <a href="/admin">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="form-box">
+    <h2>Add New Market</h2>
+
+    <form action="/save_market" method="POST">
+        <input type="text" name="market_name" placeholder="Enter Market Name" required>
+        <input type="text" name="location" placeholder="Enter Market Location" required>
+        <input type="number" step="0.1" name="distance" placeholder="Enter Distance in KM" required>
+
+        <button type="submit">Save Market</button>
+    </form>
+</div>
+
+</body>
+</html>

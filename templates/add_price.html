@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Daily Price</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <h2>Smart Market Analyzer</h2>
+    <div class="nav-links">
+        <a href="/admin">Dashboard</a>
+        <a href="/logout">Logout</a>
+    </div>
+</div>
+
+<div class="form-box">
+    <h2>Add Daily Price</h2>
+
+    <form action="/save_price" method="POST">
+
+        <select name="product_id" required>
+            <option value="">Select Product</option>
+            {% for p in products %}
+            <option value="{{ p['id'] }}">{{ p['product_name'] }}</option>
+            {% endfor %}
+        </select>
+
+        <select name="market_id" required>
+            <option value="">Select Market</option>
+            {% for m in markets %}
+            <option value="{{ m['id'] }}">{{ m['market_name'] }}</option>
+            {% endfor %}
+        </select>
+
+        <input type="number" step="0.1" name="price" placeholder="Enter Price" required>
+        <input type="date" name="price_date" required>
+
+        <button type="submit">Save Price</button>
+    </form>
+</div>
+
+</body>
+</html>
