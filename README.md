@@ -97,8 +97,8 @@ SQLite database file is automatically generated on first run.
 
 ### Step 1 — Clone Repository
 
-    git clone https://github.com/YOUR_USERNAME/smart-market-price-analyzer.git
-    cd smart-market-price-analyzer
+git clone https://github.com/ItsMeTinku/smart-market-price-analyzer.git
+cd smart-market-price-analyzer
 
 ### Step 2 — Install Requirements
 
