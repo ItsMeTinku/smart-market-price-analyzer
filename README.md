@@ -21,6 +21,28 @@ This project is developed using Python Flask, SQLite, HTML, CSS, and Matplotlib.
 
 ---
 
+## 📷 Project Preview
+
+### 🏠 Home Page
+
+![Home Page](screenshots/home.png)
+
+---
+
+### 👨‍🌾 User Dashboard
+
+![User Dashboard](screenshots/dashboard.png)
+
+---
+
+### 🛠️ Admin Dashboard
+
+![Admin Dashboard](screenshots/admin.png)
+
+---
+
+---
+
 ## 🛠️ Technology Stack
 
 | Technology | Usage |
