@@ -1,5 +1,11 @@
 # 🌾 Smart Market Price Analyzer
 
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![Flask](https://img.shields.io/badge/Flask-Web%20Framework-black)
+![SQLite](https://img.shields.io/badge/Database-SQLite-green)
+![HTML5](https://img.shields.io/badge/Frontend-HTML5-orange)
+![CSS3](https://img.shields.io/badge/Style-CSS3-blueviolet)
+
 An Industry Level Flask-Based Web Application designed to help farmers, traders, and consumers analyze agricultural market prices, monitor daily mandi trends, compare nearby markets, and make smart buy/sell decisions using predictive analytics.
 
 ---
