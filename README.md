@@ -443,11 +443,21 @@ UPDATE users SET role = 'admin' WHERE email = 'your@email.com';
 
 > Screenshots are included in **V2 only** (`screenshots/` folder).
 
-| Page | Preview |
-|---|---|
-| **Homepage** | `screenshots/homepage.png` |
-| **User Dashboard** | `screenshots/dashboard.png` |
-| **Admin Panel** | `screenshots/admin.png` |
+### 🏠 Homepage
+
+![Homepage — Landing page with feature highlights](screenshots/homepage.png)
+
+---
+
+### 📊 User Dashboard
+
+![User Dashboard — Analytics cards, best buy/sell, price trend chart](screenshots/dashboard.png)
+
+---
+
+### 🛠 Admin Panel
+
+![Admin Panel — Product, market, and daily price management tables](screenshots/admin.png)
 
 ---
 
