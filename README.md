@@ -114,8 +114,8 @@ flowchart TD
         get_connection["get_connection()"] --- create_tables["create_tables()"]
     end
 
-    db_config --> DB[("💾 database.db\nSQLite")]
-    prediction --> Chart["📊 static/charts/\nprice_chart.png\nMatplotlib"]    
+    db_config --> DB[(" database.db\nSQLite")]
+    prediction --> Chart[" static/charts/\nprice_chart.png\nMatplotlib"]    
 
     DB -. "Row data" .-> AppLayer
     Chart -. "Served as static file" .-> Browser
@@ -153,19 +153,19 @@ flowchart TD
     Choice -- "Returning user" --> Login["/login\nEnter email & password"]
 
     Register -- "POST /register_user" --> EmailCheck{"Email unique?"}
-    EmailCheck -- "No" --> ErrEmail["⚠️ Email already exists!"]
+    EmailCheck -- "No" --> ErrEmail[" Email already exists!"]
     ErrEmail --> Register
     EmailCheck -- "Yes" --> InsertUser["INSERT INTO users"]
     InsertUser --> Login
 
     Login -- "POST /login_user" --> CredCheck{"Credentials valid?"}
-    CredCheck -- "No" --> ErrCred["⚠️ Invalid Email or Password"]
+    CredCheck -- "No" --> ErrCred[" Invalid Email or Password"]
     ErrCred --> Login
     CredCheck -- "Yes" --> Session["Set session\nuser_id, user_name, role"]
 
     Session --> RoleCheck{"Role?"}
-    RoleCheck -- "admin" --> AdminDash["/admin\n🛠 Admin Dashboard"]
-    RoleCheck -- "user" --> UserDash["/dashboard\n📊 User Dashboard"]
+    RoleCheck -- "admin" --> AdminDash["/admin\n Admin Dashboard"]
+    RoleCheck -- "user" --> UserDash["/dashboard\n User Dashboard"]
 
     AdminDash & UserDash --> Logout["/logout\nClear session"]
     Logout --> Login
@@ -179,9 +179,9 @@ flowchart TD
 flowchart TD
     AdminLogin(["Admin logs in"]) --> AdminDash["Admin Dashboard\n/admin"]
 
-    AdminDash --> AP["➕ Add Product\n/add_product"]
-    AdminDash --> AM["➕ Add Market\n/add_market"]
-    AdminDash --> ADP["➕ Add Daily Price\n/add_price"]
+    AdminDash --> AP["+ Add Product\n/add_product"]
+    AdminDash --> AM["+ Add Market\n/add_market"]
+    AdminDash --> ADP["+ Add Daily Price\n/add_price"]
     AdminDash --> DelActions["🗑 Delete Records\n/delete_product, /delete_market, /delete_price"]
 
     AP -- "POST /save_product" --> ProdTable[("products table")]
@@ -189,7 +189,7 @@ flowchart TD
     ADP -- "POST /save_price\nproduct + market + price + date" --> PriceTable[("daily_prices table")]
     DelActions --> ProdTable & MktTable & PriceTable
 
-    ProdTable & MktTable & PriceTable --> Available["✅ Data available for User Analysis"]
+    ProdTable & MktTable & PriceTable --> Available[" Data available for User Analysis"]
 ```
 
 ---
