@@ -222,20 +222,20 @@ flowchart TD
 
     subgraph Dashboard["Dashboard Cards"]
         direction LR
-        C1["📊 Best Buy\nMarket & Price"]
-        C2["💹 Best Sell\nMarket & Price"]
-        C3["🔮 Tomorrow's\nPredicted Price"]
-        C4["💰 Estimated\nProfit"]
-        C5["📉 Price\nChange %"]
-        C6["🔔 Market\nAlert"]
-        C7["📈 Price Trend\nChart"]
-        C8["📋 Full Price\nRecords Table"]
+        C1[" Best Buy\nMarket & Price"]
+        C2[" Best Sell\nMarket & Price"]
+        C3[" Tomorrow's\nPredicted Price"]
+        C4[" Estimated\nProfit"]
+        C5[" Price\nChange %"]
+        C6[" Market\nAlert"]
+        C7[" Price Trend\nChart"]
+        C8[" Full Price\nRecords Table"]
     end
 ```
 
 ---
 
-### 🔄 End-to-End Data Flow
+###  End-to-End Data Flow
 
 ```mermaid
 sequenceDiagram
@@ -455,7 +455,7 @@ UPDATE users SET role = 'admin' WHERE email = 'your@email.com';
 
 ---
 
-### 🛠 Admin Panel
+###  Admin Panel
 
 ![Admin Panel — Product, market, and daily price management tables](screenshots/admin.png)
 
