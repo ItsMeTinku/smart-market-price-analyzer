@@ -173,7 +173,7 @@ flowchart TD
 
 ---
 
-### 🛠 Admin Workflow
+###  Admin Workflow
 
 ```mermaid
 flowchart TD
@@ -194,7 +194,7 @@ flowchart TD
 
 ---
 
-### 👤 User Dashboard Workflow
+###  User Dashboard Workflow
 
 ```mermaid
 flowchart TD
