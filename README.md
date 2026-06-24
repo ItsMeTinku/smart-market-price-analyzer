@@ -85,7 +85,7 @@ V2 is a **documentation and repository hygiene update**. If you are deploying th
 
 ```mermaid
 flowchart TD
-    Browser(["🌐 Browser\nHTML + CSS + Jinja2"])
+    Browser([" Browser\nHTML + CSS + Jinja2"])
 
     Browser -- "HTTP Request" --> AppLayer
 
@@ -142,7 +142,7 @@ flowchart TD
 
 ## Workflow
 
-### 🔐 Authentication Workflow
+###  Authentication Workflow
 
 ```mermaid
 flowchart TD
