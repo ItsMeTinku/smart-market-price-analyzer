@@ -38,7 +38,7 @@ The core application logic, source code, templates, and database schema are **id
 
 ### What Changed in V2
 
-#### 1. `.gitignore` Added
+#### 1.`.gitignore` Added
 V2 introduces a `.gitignore` to make the project Git-friendly and prevent committing build artifacts:
 
 ```
