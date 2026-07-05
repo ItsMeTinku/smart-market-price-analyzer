@@ -142,7 +142,7 @@ flowchart TD
 
 ## Workflow
 
-###  Authentication Workflow
+### Authentication Workflow
 
 ```mermaid
 flowchart TD
