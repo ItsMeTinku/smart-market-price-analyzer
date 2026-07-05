@@ -218,7 +218,7 @@ flowchart TD
         S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7
     end
 
-    Pipeline --> Dashboard["📊 Dashboard Rendered"]
+    Pipeline --> Dashboard[" Dashboard Rendered"]
 
     subgraph Dashboard["Dashboard Cards"]
         direction LR
