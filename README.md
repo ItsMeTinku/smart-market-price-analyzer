@@ -230,8 +230,6 @@ flowchart TD
     end
 ```
 
----
-
 ###  End-to-End Data Flow
 
 ```mermaid
