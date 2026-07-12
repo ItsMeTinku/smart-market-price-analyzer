@@ -171,8 +171,6 @@ flowchart TD
     Logout --> Login
 ```
 
----
-
 ###  Admin Workflow
 
 ```mermaid
