@@ -190,7 +190,6 @@ flowchart TD
     ProdTable & MktTable & PriceTable --> Available[" Data available for User Analysis"]
 ```
 
----
 
 ###  User Dashboard Workflow
 
