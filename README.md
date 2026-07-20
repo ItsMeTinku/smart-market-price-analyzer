@@ -470,5 +470,7 @@ UPDATE users SET role = 'admin' WHERE email = 'your@email.com';
 | **Multi-user chart** | All users share one chart file | Generate per-user or per-product chart files |
 
 <div align"center">
+    
 ### Thanks for reading ❤️
+
 </div>    
