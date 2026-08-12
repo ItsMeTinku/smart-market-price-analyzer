@@ -443,7 +443,7 @@ UPDATE users SET role = 'admin' WHERE email = 'your@email.com';
 
 ---
 
-### 📊 User Dashboard
+###  User Dashboard
 
 ![User Dashboard — Analytics cards, best buy/sell, price trend chart](screenshots/dashboard.png)
 
