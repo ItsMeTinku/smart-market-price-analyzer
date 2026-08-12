@@ -437,7 +437,7 @@ UPDATE users SET role = 'admin' WHERE email = 'your@email.com';
 
 > Screenshots are included in **V2 only** (`screenshots/` folder).
 
-### 🏠 Homepage
+###  Homepage
 
 ![Homepage — Landing page with feature highlights](screenshots/homepage.png)
 
