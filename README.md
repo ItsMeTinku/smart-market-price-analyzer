@@ -470,5 +470,7 @@ UPDATE users SET role = 'admin' WHERE email = 'your@email.com';
 
 <div align="center">
 -------------------------
-### Thanks for reading ❤️
+
+### Thanks for reading ♥️
+-------------------------
 </div>    
